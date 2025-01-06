@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jscript.js" defer></script>
+</head>
+<body>
+    <div class="gallery">
+       
+        <a href="proyecto1.html" class="image-link">
+            <img src="GRENN.png" alt="Proyecto 1">
+        </a>
+        
+        <a href="proyecto2.html" class="image-link">
+            <img src="jelly.png" alt="Proyecto 2">
+        </a>
+        <a href="proyecto3.html" class="image-link">
+            <img src="pexels-threze-gue-3616687-29527933.jpg" alt="Proyecto 3">
+        </a>
+        <a href="proyecto4.html" class="image-link">
+            <img src="maya.png" alt="Proyecto 4">
+        </a>
+        <a href="proyecto5.html" class="image-link">
+            <img src="hojas.png" alt="Proyecto 5">
+        </a>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"></feColorMatrix>
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    
+ 
+    <div id="cursor"></div>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da7da13f-b24e-47de-a628-d6c79e8cd62c" data-elfsight-app-lazy></div>
+</body>
+</html>
