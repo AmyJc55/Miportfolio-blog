@@ -1,82 +1,130 @@
-/* 1. Estilo básico */
 body {
-
-  font-family: 'Arial', sans-serif;
-  background-color: #2e8b57; /* Verde de fondo */
-  color: #ffffff; /* Blanco para el texto */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #00843D;
 }
 
-/* 2. Barra de navegación */
 .navbar {
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 30px 60px;
-  background-color: #228B22; /* Verde oscuro */
-  color: #ffffff;
-  font-size: 18px;
+  align-items: left;
+  background-color: #00843D; /* Color verde */
+  color: #000; /* Color del texto */
+  padding: 10px 20px;
+  height: 100px; /* Altura de la barra */
+  box-shadow: 0 1px 0 #000; /* Línea negra abajo */
+  font-family: "Space Grotesk", serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 40px;
+  }
+  .bg-green-custom {
+    background-color: #28a745; /* Verde Bootstrap */
+  }
+  .container {
+    display: flex;
+  
+  }
+.center {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: "Space Grotesk";
 }
 
-/* 3. Círculo principal */
-.circle {
-  position: center;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #000;
-  border-radius: 50%;
+/* Estilo del párrafo */
+.typing-effect {
+  text-align: center;
+  white-space: nowrap; /* El texto queda en una sola línea */
+  overflow: hidden; /* Oculta las letras "no escritas" */
+  border-right: 3px solid black; /* Simula el cursor de escritura */
+  width: 150ch; /* El ancho exacto para "Hola Mundo" */
+  animation: typing 2s steps(10, end), blink 0.5s step-end infinite alternate;
+}
+
+/* Animación para escribir letra por letra */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10ch; /* Coincide con el número de caracteres del texto */
+  }
+}
+
+/* Animación para el parpadeo del cursor */
+@keyframes blink {
+  from {
+    border-color: black;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+
+
+.circle-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-}
-.main-circle {
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-
-.rotating-image {
-  position: absolute;
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.orange-links {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.orange-circle {
-  width: 20px;
-  height: 20px;
-  background-color: #ffa500; /* Naranja */
+  height: 100vh;
+  background-color: #00843D;
   border-radius: 50%;
-  display: block;
+  overflow: hidden; /* Esto asegura que la forma circular no se desborde */
+}
+
+.circle {
+  position: relative;
+  width: 90vw; /* Usa un valor en unidades relativas para que sea responsivo */
+  height: 90vw; /* Mantiene la proporción 1:1 */
+  max-width: 900px; /* Tamaño máximo para pantallas grandes */
+  max-height: 900px; /* Tamaño máximo para pantallas grandes */
+  border: 2px solid #000;
+  border-radius: 50%; /* Garantiza que el círculo sea perfectamente redondo */
+}
+
+.proyecto-link {
   position: absolute;
-}
-
-/* Posición de los enlaces naranjas en los bordes del círculo */
-.orange-circle:nth-child(1) { top: -10px; left: 50%; transform: translateX(-50%); }
-.orange-circle:nth-child(2) { right: -10px; top: 50%; transform: translateY(-50%); }
-.orange-circle:nth-child(3) { bottom: -10px; left: 50%; transform: translateX(-50%); }
-.orange-circle:nth-child(4) { left: -10px; top: 50%; transform: translateY(-50%); }
-
-/* 4. Cuadro de texto */
-.text-box {
-  margin-top: 20px;
-  padding: 0 20px;
+  text-decoration: none;
+  background-color: rgb(32, 200, 71);
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; /* Igual al width para un círculo perfecto */
+  font-size: 14px;
   text-align: center;
-  font-size: 16px;
-  line-height: 1.5;
+  color: #333;
+  display: flex;
+  justify-content: center; /* Centrar el texto horizontalmente */
+  align-items: center; /* Centrar el texto verticalmente */
+  transform: translate(-50%, -50%);
 }
+@media (max-width: 500px) {
+  .circle-link {
+    padding: 8px 15px; /* Ajustar tamaño del enlace en pantallas pequeñas */
+    font-size: 14px; /* Reducir tamaño de texto en pantallas pequeñas */
+  }
 }
 
-  
+
+.circle-link:hover {
+  background-color: #0f730b;
+
+}
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.center-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+

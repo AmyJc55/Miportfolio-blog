@@ -2,38 +2,92 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- Configuración de la vista para dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz de UX/UI</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <nav>
-        <div class="navbar">
-            <span>AIMARANTA CRUZ</span>
-            <span>Info, EMAIL</span>
-        </div>
-    </nav>
+    <!-- Breve descripción del contenido de mi página -->
+    <meta name="description" content="Portafolio de Amaranta Cruz, mostrando proyectos de manera interactiva.">
+    <meta name="author" content="Amaranta Cruz">
+    <!-- Palabras clave para SEO -->
+    <meta name="keywords" content="portafolio, proyectos, desarrollo web, diseño interactivo, front-end">
+    <!-- Metadatos para compartir en redes sociales -->
+        <!-- Título que se muestra al compartir en redes -->
+    <meta property="og:title" content="Portafolio de Amaranta Cruz">
+     <!-- Descripción que aparece al compartir en redes -->
+    <meta property="og:description" content="Conoce mis proyectos interactivos y mi experiencia como desarrolladora.">
+      <!-- Imagen asociada al enlace compartido -->
+    <meta property="og:image" content="tu-imagen.png">
+    <meta property="og:url" content="https://tu-portafolio.com">
 
-    <section class="main-circle">
-        <div class="circle">
-            <img class="rotating-image" src="image1.png" alt="Proyecto">
-            <div class="orange-links">
-                <a href="#proyecto1" class="orange-circle"></a>
-                <a href="#proyecto2" class="orange-circle"></a>
-                <a href="#proyecto3" class="orange-circle"></a>
-                <a href="#proyecto4" class="orange-circle"></a>
-            </div>
-        </div>
-        <div class="text-box">
-            <p>
-                A través de mis habilidades en UX/UI y front-end, busco plasmar cada concepto en una página que
-                se sienta intuitiva y cercana, siempre con un toque personal que hace que cada proyecto se distinga.
-                Si eres de los que cree que la creatividad y la tecnología deben ir de la mano, estás en el lugar adecuado.
-                ¡Acompáñame en este viaje, donde la innovación se encuentra con la simplicidad!
+    <!-- Título de la página (aparece en la pestaña del navegador) -->
+    <title>Portafolio - Amaranta Cruz</title>
+    <!-- Enlace a Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--ENLACE FUENTES-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Space+Grotesk:wght@300..700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<!--Fuente header-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Space+Grotesk:wght@300..700&family=Special+Elite&display=swap" rel="stylesheet">
+<!-- Script de Bootstrap JS (incluye Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">  </head>
+    
+<body>
+    <header>
+ <!-- BARRA DE NAVEGACIÓN -->
+   <!--PRACTICAS SEO EN  ETIQUETA TITLE  -->
+ <header>
+
+  <nav class="navbar">
+    <div class="left">AMARANTA CRUZ</div>
+
+    <li><a class="dropdown-item" href="https://github.com/AmyJc55" target="_blank" rel="noopener noreferrer" title="Visita mi perfil en GitHub">GitHub</a></li>
+            <li><a class="dropdown-item" href="https://www.linkedin.com/in/amaranta-cruz-hernández-141211327/" target="_blank" rel="noopener noreferrer" title="Conéctate conmigo en LinkedIn">LinkedIn</a></li>
+            <li><a class="dropdown-item" href="https://www.instagram.com/amycruz555/" target="_blank" rel="noopener noreferrer" title="Sígueme en Instagram">Redes Sociales</a></li>
+        
+</nav>
+</header>
+
+            
+
+    </header>
+
+    <main>
+      <!--INTRODUCCION -->
+        <section id="inicio" class="center">
+            
+          <p class="typing-effect">Hola Mundo</p>
+           <p>Soy Amy y me gustar pensar en formas sencillas de plasmar ideas haciendolas 
+              visualmente atractivas utilizando front end y ux ui 
             </p>
-        </div>
-    </section>
+        </section>
+<!--LINK QUE DIRECCIONA A PROYECTOS -->
+        <section id="proyectos" class="circle-container">
+            <div class="circle">
+                <a href="https://url-proyecto1.com" target="_blank" class="proyecto-link " style="top: 1%; left: 50%;"><i class="fa-duotone fa-solid fa-code-branch"></i></a>
+                <a href="https://url-proyecto2.com" target="_blank" class="proyecto-link " style="top: 45%; right: 95%;"><i class="fa-solid fa-terminal"></i></a>
+                <a href="https://url-proyecto3.com" target="_blank" class="proyecto-link " style="bottom: -5%; left: 50%;"><i class="fa-solid fa-file-code"></i></a>
+                <a href="https://url-proyecto4.com" target="_blank" class="proyecto-link " style="left: 100%; top: 45%;"><i class="fa-solid fa-palette"></i></a>
+               
+               <!--CARRUSEL CENTRAL IMAGENES -->
+               
+                <div class="center-image">
+                    <img src="Imagenes/images.jpeg" alt="Portafolio" />
+                </div>
+            </div>
+        </section> 
+<!--FOOTER -->
+        <section id="contacto" class="center">
+            <h2>Contacto</h2>
+            <p>¡Escríbeme para colaborar en proyectos interesantes!</p>
+        </section>
+    </main>
 
     <script src="funciones.js"></script>
 </body>
 </html>
+

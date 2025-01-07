@@ -1,20 +1,17 @@
-// 1. Rotación automática de imágenes
-const images = ['image1.png', 'image2.png', 'image3.png']; // Rutas de las imágenes
-let currentImageIndex = 0;
+// script.js
 
-const rotatingImage = document.querySelector('.rotating-image');
+// Función para el smooth scroll
+function scrollToSection(event) {
+  event.preventDefault();
+  const targetId = event.target.getAttribute("href").substring(1);
+  const targetElement = document.getElementById(targetId);
 
-setInterval(() => {
-    currentImageIndex = (currentImageIndex + 1) % images.length; // Ciclo entre las imágenes
-    rotatingImage.src = images[currentImageIndex];
-}, 3000); // Cambia cada 3 segundos
+  if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
-// 2. Scroll suave al hacer clic en los círculos naranjas
-const orangeLinks = document.querySelectorAll('.orange-circle');
-
-orangeLinks.forEach((link, index) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.querySelector(`#proyecto${index + 1}`).scrollIntoView({ behavior: 'smooth' });
-    });
+// Asignar el evento a los enlaces de navegación
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", scrollToSection);
 });
