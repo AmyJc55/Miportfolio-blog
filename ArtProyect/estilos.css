@@ -151,10 +151,13 @@ font-size: 60px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.5; /* Opacidad inicial */
   border-radius: 50%;
+  transition: opacity 0.3s ease-in-out; /* Transición suave */
 }
-.center-image:hover .img-hover {
-  animation: changeImage 2s infinite;
+
+.center-image:hover img {
+  opacity: 1; /* Imagen completamente visible al pasar el mouse */
 }
 
 
