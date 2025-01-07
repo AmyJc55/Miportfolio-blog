@@ -4,62 +4,82 @@ body {
   background-color: #00843D;
 }
 
+/* Estilos generales de la barra de navegación */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: left;
-  background-color: #00843D; /* Color verde */
-  color: #000; /* Color del texto */
-  padding: 10px 20px;
-  height: 100px; /* Altura de la barra */
-  box-shadow: 0 1px 0 #000; /* Línea negra abajo */
-  font-family: "Space Grotesk", serif;
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 40px;
+  align-items: center;
+  background-color: #00843D;
+padding: 20px 40px;
+height: 100px; /* Altura de la barra */
+box-shadow: 0 1px 0 #000; /* Línea negra abajo */
+font-family: "Space Grotesk", serif;
+font-style: normal;
+font-weight: lighter;
+font-size: 60px;
+}
+
+.navbar .left {
+  font-size: 2rem;
+  color: black;
+}
+
+/* Estilos para los enlaces */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: rgb(8, 6, 6);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .bg-green-custom {
-    background-color: #28a745; /* Verde Bootstrap */
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
   }
-  .container {
-    display: flex;
-  
+
+  .navbar ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
+
+  .navbar ul li a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .center {
   text-align: center;
   padding: 50px 20px;
   font-family: "Space Grotesk";
+  font-size: larger;
+}
+.dropdown-item{
+  display: flexbox;
 }
 
-/* Estilo del párrafo */
-.typing-effect {
-  text-align: center;
-  white-space: nowrap; /* El texto queda en una sola línea */
-  overflow: hidden; /* Oculta las letras "no escritas" */
-  border-right: 3px solid black; /* Simula el cursor de escritura */
-  width: 150ch; /* El ancho exacto para "Hola Mundo" */
-  animation: typing 2s steps(10, end), blink 0.5s step-end infinite alternate;
-}
-
-/* Animación para escribir letra por letra */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 10ch; /* Coincide con el número de caracteres del texto */
-  }
-}
-
-/* Animación para el parpadeo del cursor */
-@keyframes blink {
-  from {
-    border-color: black;
-  }
-  to {
-    border-color: transparent;
-  }
-}
 
 
 
@@ -107,10 +127,16 @@ body {
 }
 
 
-.circle-link:hover {
-  background-color: #0f730b;
-
+.circle-link {
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para el color y el zoom */
 }
+
+.circle-link:hover {
+  background-color: #0f730b; /* Cambio de color de fondo */
+  transform: scale(1.1); /* Efecto de zoom, hace el elemento un 10% más grande */
+}
+
+
 
 .center-image {
   position: absolute;
@@ -127,4 +153,8 @@ body {
   object-fit: cover;
   border-radius: 50%;
 }
+.center-image:hover .img-hover {
+  animation: changeImage 2s infinite;
+}
+
 
