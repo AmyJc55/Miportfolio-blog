@@ -74,7 +74,7 @@ font-size: 60px;
   text-align: center;
   padding: 50px 20px;
   font-family: "Space Grotesk";
-  font-size: larger;
+  font-size: x-large;
 }
 .dropdown-item{
   display: flexbox;
@@ -159,5 +159,96 @@ font-size: 60px;
 .center-image:hover img {
   opacity: 1; /* Imagen completamente visible al pasar el mouse */
 }
+/*About me 
+
+/* Sección de estilos para modificar la fuente */
+.container {
+  font-family: "Lexend Mega", serif; /* Cambia la fuente a Arial */
+  font-size: 25px;                 /* Tamaño de la fuente base */
+  line-height: 1.6;                /* Espaciado entre líneas */
+  color: #134f06;                     /* Color del texto */
+}
+
+.container h2 {
+  font-family: "Lexend Mega", serif; /* Fuente para los títulos */
+  font-size: 2rem;                 /* Tamaño específico para el título principal */
+  font-weight: bold;               /* Negrita */
+}
+
+.container h3 {
+  font-family: "Lexend Mega", serif;  /* Mantén la coherencia con los títulos */
+  font-size: 1.5rem;               /* Tamaño menor que el principal */
+  font-weight: bold;
+  color: #134f06;                     /* Un tono más claro para subtítulos */
+}
+
+.container p {
+  font-family: "Lexend Mega", serif; /* Fuente para los párrafos */
+  font-size: 1rem;                  /* Tamaño estándar */
+  line-height: 1.8;                 /* Más espacio entre líneas para facilitar la lectura */
+  font-weight: 300;                 /* Peso ligero */
+  color: #134f06;                      /* Color ligeramente más claro */
+}
 
 
+.carousel-container {
+  background-color: #134f06; /* Fondo del carrusel */
+}
+
+.transition-effect {
+  height: 20px; /* Altura de la transición */
+  background: linear-gradient(to bottom, #e8b36d, #827210); /* Degradado entre el color del carrusel y el fondo de la siguiente sección */
+}
+html {
+  scroll-behavior: smooth;
+}
+ 
+
+
+/* Estilos generales */
+footer {
+  background-color: #00843D;
+  color: rgb(15, 2, 2);
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  background-color: transparent;
+  border-color: #28a745;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: rgb(0, 0, 0);
+  border-color: #218838;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-outline-success {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+  
