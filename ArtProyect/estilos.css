@@ -81,7 +81,7 @@ font-size: 60px;
 }
 
 
-
+/*Enlaces circulos pequeños */
 
 .circle-container {
   display: flex;
@@ -163,10 +163,10 @@ font-size: 60px;
 
 /* Sección de estilos para modificar la fuente */
 .container {
-  font-family: "Lexend Mega", serif; /* Cambia la fuente a Arial */
-  font-size: 25px;                 /* Tamaño de la fuente base */
-  line-height: 1.6;                /* Espaciado entre líneas */
-  color: #134f06;                     /* Color del texto */
+  font-family: "Lexend Mega", serif;
+  font-size: 25px;              
+  line-height: 1.6;               
+  color: #134f06;                     
 }
 
 .container h2 {
@@ -183,21 +183,21 @@ font-size: 60px;
 }
 
 .container p {
-  font-family: "Lexend Mega", serif; /* Fuente para los párrafos */
-  font-size: 1rem;                  /* Tamaño estándar */
-  line-height: 1.8;                 /* Más espacio entre líneas para facilitar la lectura */
-  font-weight: 300;                 /* Peso ligero */
-  color: #134f06;                      /* Color ligeramente más claro */
+  font-family: "Lexend Mega", serif; 
+  font-size: 1rem;                 
+  line-height: 1.8;               
+  font-weight: 300;                
+  color: #134f06;                    
 }
 
 
 .carousel-container {
-  background-color: #134f06; /* Fondo del carrusel */
+  background-color: #134f06; 
 }
 
 .transition-effect {
-  height: 20px; /* Altura de la transición */
-  background: linear-gradient(to bottom, #e8b36d, #827210); /* Degradado entre el color del carrusel y el fondo de la siguiente sección */
+  height: 20px; 
+  background: linear-gradient(to bottom, #e8b36d, #827210); 
 }
 html {
   scroll-behavior: smooth;
