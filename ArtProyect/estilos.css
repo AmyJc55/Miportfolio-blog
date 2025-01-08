@@ -11,7 +11,7 @@ body {
   align-items: center;
   background-color: #00843D;
 padding: 20px 40px;
-height: 100px; /* Altura de la barra */
+height: 250px; /* Altura de la barra */
 box-shadow: 0 1px 0 #000; /* Línea negra abajo */
 font-family: "Space Grotesk", serif;
 font-style: normal;
@@ -49,7 +49,7 @@ font-size: 60px;
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    flex-direction:row ;
     align-items: flex-start;
   }
 
@@ -97,9 +97,9 @@ font-size: 60px;
   position: relative;
   width: 90vw; /* Usa un valor en unidades relativas para que sea responsivo */
   height: 90vw; /* Mantiene la proporción 1:1 */
-  max-width: 900px; /* Tamaño máximo para pantallas grandes */
-  max-height: 900px; /* Tamaño máximo para pantallas grandes */
-  border: 2px solid #000;
+  max-width: 900px; 
+  max-height: 900px; 
+ 
   border-radius: 50%; /* Garantiza que el círculo sea perfectamente redondo */
 }
 
@@ -109,13 +109,13 @@ font-size: 60px;
   background-color: rgb(32, 200, 71);
   border: 1px solid #000;
   border-radius: 50%;
-  width: 50px; 
-  height: 50px; /* Igual al width para un círculo perfecto */
-  font-size: 14px;
+  width: 100px; 
+  height: 100px; /* Igual al width para un círculo perfecto */
+  font-size: 25px;
   text-align: center;
   color: #333;
   display: flex;
-  justify-content: center; /* Centrar el texto horizontalmente */
+  justify-content: center; 
   align-items: center; /* Centrar el texto verticalmente */
   transform: translate(-50%, -50%);
 }
