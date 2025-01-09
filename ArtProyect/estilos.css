@@ -121,7 +121,7 @@ font-size: 60px;
 }
 .proyecto-link:hover {
   transform: translate(-50%, -50%) scale(1.5); /* Aumentar tamaño al pasar el cursor */
-
+}
 
 @media (max-width: 500px) {
   .circle-link {
