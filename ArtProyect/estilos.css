@@ -105,20 +105,24 @@ font-size: 60px;
 
 .proyecto-link {
   position: absolute;
-  text-decoration: none;
   background-color: rgb(32, 200, 71);
   border: 1px solid #000;
   border-radius: 50%;
   width: 75px; 
   height: 75px; /* Igual al width para un círculo perfecto */
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   color: #333;
   display: flex;
   justify-content: center; 
   align-items: center; /* Centrar el texto verticalmente */
   transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out; /* Transición suave */
 }
+.proyecto-link:hover {
+  transform: translate(-50%, -50%) scale(1.5); /* Aumentar tamaño al pasar el cursor */
+
+
 @media (max-width: 500px) {
   .circle-link {
     padding: 8px 15px; /* Ajustar tamaño del enlace en pantallas pequeñas */
