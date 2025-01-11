@@ -1,4 +1,16 @@
-// script.js
+// Esperar a que el DOM cargue completamente
+document.addEventListener("DOMContentLoaded", () => {
+  // Simular un tiempo de carga (por ejemplo, 2 segundos)
+  setTimeout(() => {
+      // Ocultar la pantalla de carga
+      document.getElementById("loading-screen").style.display = "none";
+      // Mostrar el contenido principal
+      document.getElementById("main-content").style.display = "block";
+  }, 2000); // Cambia el tiempo según lo necesario
+});
+
+
+
 
 function scrollToPosition(top, left = 0, duration = 1000) {
   const startY = window.scrollY;
