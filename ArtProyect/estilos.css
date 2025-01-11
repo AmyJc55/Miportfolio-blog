@@ -79,11 +79,16 @@ font-family: "Space Grotesk", serif;
 font-style: normal;
 font-weight: lighter;
 font-size: 80px;
+position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 10;
 }
 
 .navbar .left {
   font-size: 2rem;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 /* Estilos para los enlaces */
@@ -106,6 +111,10 @@ font-size: 80px;
 
 .navbar ul li a:hover {
   text-decoration: underline;
+  text-shadow: #d49e58;
+color: #e8b36d;
+transform: scale(1.2); /* Aplica un zoom del 20% */
+  transition: transform 0.3s ease; /* Suaviza la animación */
 }
 
 /* Media query para pantallas pequeñas */

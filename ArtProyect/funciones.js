@@ -90,3 +90,16 @@ document.addEventListener('mousemove', onMouseMove, false);
 
 initCursor();
 updateCursor();
+
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll) {
+    navbar.style.top = '-60px'; // Oculta la navbar
+  } else {
+    navbar.style.top = '0'; // Muestra la navbar
+  }
+  lastScroll = currentScroll;
+});
