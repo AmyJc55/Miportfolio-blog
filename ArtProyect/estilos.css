@@ -72,13 +72,13 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #00843D;
-padding: 20px 40px;
+padding: 15px 30px;
 height: 250px; /* Altura de la barra */
 box-shadow: 0 1px 0 #000; /* Línea negra abajo */
 font-family: "Space Grotesk", serif;
 font-style: normal;
 font-weight: lighter;
-font-size: 60px;
+font-size: 80px;
 }
 
 .navbar .left {
@@ -146,9 +146,11 @@ font-size: 60px;
 /*Enlaces circulos pequeños */
 
 .circle-container {
+
   display: flex;
+
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   background-color: #00843D;
   border-radius: 50%;
@@ -170,8 +172,8 @@ font-size: 60px;
   background-color: #ca9e25c7;
   border: 1px solid #dbae34;
   border-radius: 50%;
-  width: 110px; 
-  height: 110px; /* Igual al width para un círculo perfecto */
+  width: 100px; 
+  height: 100px; /* Igual al width para un círculo perfecto */
   font-size: 30px;
   text-align: center;
   color: #333;
@@ -179,27 +181,54 @@ font-size: 60px;
   justify-content: center; 
   align-items: center; /* Centrar el texto verticalmente */
   transform: translate(-50%, -50%);
-  transition: transform 0.3s ease-in-out; /* Transición suave */
+  transition: transform 0.9s ease-in-out; /* Transición suave */
 }
 .proyecto-link:hover {
-  transform: translate(-50%, -50%) scale(1.8); /* Aumentar tamaño al pasar el cursor */
+  transform: translate(-50%, -50%) scale(1.9); /* Aumentar tamaño al pasar el cursor */
+  
+}
+
+.tooltiptext {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  visibility: hidden;
+  width: 120px; /* Ajusta el ancho */
+  height: 120px; /* Ajusta la altura para que sea igual al ancho */
+  background-color: #00843D;;
+  color: #faf4f4;
+  text-align: center;
+  border-radius: 50%; /* Hace que el tooltip sea circular */
+  padding: 10px;
+  position: absolute;
+  z-index: 5;
+  bottom: -1%; /* Posiciona el tooltip arriba del icono */
+  left: 50%; /* Centra el tooltip horizontalmente */
+  margin-left: -60px; /* Ajusta para que quede centrado */
+  opacity: 9;
+  transition: opacity 0.1s;
+}
+
+
+.proyecto-link:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 500px) {
   .circle-link {
-    padding: 8px 15px; /* Ajustar tamaño del enlace en pantallas pequeñas */
-    font-size: 14px; /* Reducir tamaño de texto en pantallas pequeñas */
+    padding: 8px 15px;
+    font-size: 14px;
   }
 }
 
-
 .circle-link {
-  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para el color y el zoom */
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .circle-link:hover {
-  background-color: #0f730b; /* Cambio de color de fondo */
-  transform: scale(1.1); /* Efecto de zoom, hace el elemento un 10% más grande */
+  background-color: #0f730b;
+  transform: scale(1.1);
 }
 
 
@@ -318,3 +347,36 @@ footer {
 }
 
   
+/*Cursor*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+:root {
+  --cursor-size: 28px;
+  --bg: #33c056;
+}
+
+#cursor {
+  position: fixed;
+  top: calc(var(--cursor-size) * -0.5);
+  left: calc(var(--cursor-size) * -0.5);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.cursor-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border-radius: var(--cursor-size);
+  background: var(--bg);
+  transform-origin: center center;
+}

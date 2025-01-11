@@ -46,8 +46,22 @@
 
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">  </head>
-    
+
 <body>
+
+  <!--cursor-->
+  <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"></feColorMatrix>
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+        </filter>
+    </defs>
+</svg>
+
+
+<div id="cursor"></div>
   
  <!-- BARRA DE NAVEGACIÓN -->
    <!--PRACTICAS SEO EN  ETIQUETA TITLE y noopener noreferrer para mejora el rendimiento y la seguridad -->
@@ -77,12 +91,17 @@
       <p><span id="typing-effect">Cargando...</span></p>
   </div>
 <!--LINK QUE DIRECCIONA A PROYECTOS -->
+<!--se utilizan -->
         <section id="proyectos" class="circle-container">
             <div class="circle">
-                <a href="https://amyjc55.github.io/StudyTracker/" target="_blank" class="proyecto-link " style="top: 9%; left: 50%;"><i class="fa-duotone fa-solid fa-code-branch"></i></a>
-                <a href="https://github.com/ASibajaV/E-MX" target="_blank" class="proyecto-link " style="top: 45%; right: 70%;"><i class="fa-solid fa-terminal"></i></a>
-                <a href="https://amyjc55.github.io/error404/" target="_blank" class="proyecto-link " style="bottom: -1%; left: 50%;"><i class="fa-solid fa-file-code"></i></a>
-                <a href="https://amyjc55.github.io/NasaApi/" target="_blank" class="proyecto-link " style="left: 85%; top: 45%;"><i class="fa-solid fa-palette"></i></a>
+                <a href="https://amyjc55.github.io/StudyTracker/" target="_blank" class="proyecto-link " style="top: 10%; left: 50%; transform: translateX(-50%);"><i class="fa-duotone fa-solid fa-code-branch"></i> 
+                  <span class="tooltiptext">Study Tracker</span></a> 
+                <a href="https://github.com/ASibajaV/E-MX" target="_blank" class="proyecto-link " style="bottom: 10%; left: 50%; transform: translateX(-50%);"><i class="fa-solid fa-terminal"></i>
+                  <span class="tooltiptext">Raices Mexico</span></a> 
+                <a href="https://amyjc55.github.io/error404/" target="_blank" class="proyecto-link " style="top: 50%; left: 10%; transform: translateY(-50%);"><i class="fa-solid fa-file-code"></i>
+                  <span class="tooltiptext">Error 404</span></a>
+                <a href="https://amyjc55.github.io/NasaApi/" target="_blank" class="proyecto-link " style="top: 50%; right: 10%; transform: translateY(-50%);"><i class="fa-solid fa-palette"></i>
+                  <span class="tooltiptext">Nasa Api</span></a>
                
                <!--CARRUSEL CENTRAL IMAGENES -->
                
@@ -153,8 +172,7 @@
           </div>
         </footer>
         
-        
-        <script src="funciones.js"></script>
+       <script src="funciones.js"></script>
+     
     </body>
-    
-    </html>
+   </html>
